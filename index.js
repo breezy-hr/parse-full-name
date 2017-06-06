@@ -70,6 +70,7 @@ exports.parseFullName = function parseFullName(
                 namePartWords[j].slice(3).toLowerCase();
             } else if (
                 namePartLabels[j] === 'suffix' &&
+                nameParts.length > j &&
                 nameParts[j].slice(-1) !== '.' &&
                 !suffixList.indexOf(nameParts[j].toLowerCase())
               ) { // Convert suffix abbreviations to UPPER CASE
